@@ -76,3 +76,50 @@ function replaceSpace(str){
     return str.replace(/\s+/g,'%20');
 }
 ```
+
+## 题：
+
+字符串排列：输入一个字符串,按字典序打印出该字符串中字符的所有排列。
+例如输入字符串abc,
+则打印出由字符a,b,c所能排列出来的所有字符串abc,acb,bac,bca,cab和cba。
+
+## 思路
+回溯法：
+回溯算法也叫试探法，它是一种系统地搜索问题的解的方法。回溯算法的基本思路是：暴力算法的改进，在通过遍历所有路径基础上，通过回溯（往回找）筛除不可能的路径，提高效率。
+
+1.记录一个字符 (temp)，用于存储当前需要进入排列的字符。
+2.记录一个字符串 (current)，用于记录当前已经排列好的字符。
+3.记录一个队列 (queue)，用来存储还未被排列的字符。
+
+* 每次排列将temp添加到current
+* 如果queue为空，则本次排列完成，将curret加入到结果数组中，结束递归
+* 如果queue不为空，说明还有未排列的字符
+* 递归排列queue中剩余的字符
+* 为了不影响后续排列，每次递归完成，将当前递归的字符temp加回队列
+
+```js
+function Permutation(str) {
+    const result = []; // 排列结果
+    if(str) {
+        // 将字符拆分并分离存入队列queue
+        quene = str.split('')
+        PermutationCore(queue,result);
+    }
+    result.sort();
+    return [...new Set(result)];
+}
+
+function PermutationCore(queue,result,temp = "",current = ""){
+    // temp为字符 current为字符串
+    current += temp;
+    if (queue.length === 0) {
+        result.push(current);
+        return;
+    }
+    for (let i = 0; i < queue.length; i++) {
+        temp = queue.shift();
+        PermutationCore(queue, result, temp, current);
+        queue.push(temp); 
+    }
+}
+```
