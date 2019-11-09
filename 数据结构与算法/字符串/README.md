@@ -54,3 +54,25 @@ function isNumber(s){
 }
 ```
 
+## 题：
+
+实现一个函数，将一个字符串中的每个空格替换成“%20”。
+例如，当字符串为We Are Happy。则经过替换之后的字符串为We%20Are%20Happy。
+
+## 思路：
+
+1.用正则实现字符串的替换 
+2.用正则表达式找到所有空格在进行替换
+
+```js
+function replaceSpace(str){
+    return str.split(' ').join('%20');
+}
+function replaceSpace(str){
+    return str.replace(/\s/g,'%20');
+}
+function replaceSpace(str){
+    // 一次性替换多个空格
+    return str.replace(/\s+/g,'%20');
+}
+```
