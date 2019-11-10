@@ -7,7 +7,6 @@
 
 ## 思路
 
-
 ```js
 var dataStack = [];
 var minStack = [];
