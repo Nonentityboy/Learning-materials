@@ -1,6 +1,60 @@
 ## 栈与队列
 数组中，我们可以通过索引随机访问元素，但是在某些情况下，我们可能要限制数据的访问顺序，于是有了两种限制访问顺序的数据结构：栈（先进后出）、队列（先进先出）。
 
+## 实现栈
+```js
+class Stack {
+    constructor() {
+        this.stack = []
+    }
+    push(item) {
+        this.stack.push(item) // 尾部添加
+    }
+    pop(){
+        this.stack.pop() // 去除首元素
+    }
+    peek(){
+        return this.stack[this.getCount() - 1] //获取尾元素
+    }
+    getCount() {
+        return this.stack.length // 获取栈长度
+    }
+    isEmpty() {
+        return this.getCount() === 0 //判断栈元素是否为空
+    }
+}
+```
+
+## 实现单链队列
+```js
+class Queue {
+    constructor() {
+        this.queue = []
+    }
+    enQueue(item) {
+        this.queue.push(item) // 尾部添加元素
+    }
+    deQueue() {
+        return this.queue.shift() // 去除队列头元素
+    }
+    getHeader() {
+        return this.queue[0]  //获取队列头元素
+    }
+    getLength() {
+        return this.queue.length // 获取队列长度
+    }
+    isEmpty() {
+        return this.getLength() === 0 //判断队列是否为空
+    }
+}
+```
+单链队列出队O(n)的时间复杂度，引入了循环队列，循环队列的出队操作平均是O(1)时间复杂度。
+
+## 循环队列
+```js
+
+```
+
 ## 题目
 包含min函数的栈，定义栈的数据结构。
 在该类型中实现一个能够得到栈中所含最小元素的min函数（时间复杂度应为O（1））。
