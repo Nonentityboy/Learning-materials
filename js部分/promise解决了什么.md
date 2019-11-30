@@ -4,7 +4,7 @@
 状态的特点：Promise 异步操作有三种状态：pending（进行中）、fulfilled（已成功）和 rejected（已失败）。除了异步操作的结果，任何其他操作都无法改变这个状态。
 Promise 对象只有：从 pending 变为 fulfilled 和从 pending 变为 rejected 的状态改变。只要处于 fulfilled 和 rejected ，状态就不会再变了即 resolved（已定型）。
 
-```
+```js
 const p1 = new Promise(function(resolve,reject){
     resolve('success1');
     resolve('success2');
@@ -33,7 +33,8 @@ then 方法接收两个函数作为参数，第一个参数是 Promise 执行成
 
 #### then 方法的特点
  JavaScript 事件队列的当前运行完成之前，回调函数永远不会被调用。
- ```
+
+```es6
  const p = new Promise(function(resolve,reject){
   resolve('success');
 });
