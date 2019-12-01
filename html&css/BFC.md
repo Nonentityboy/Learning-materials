@@ -23,7 +23,7 @@ BFC(Block formatting context)直译为"块级格式化上下文"。它是一个�
 4，计算BFC元素高度时，即使是浮动元素也会参与计算
 5，每个元素的左外边距与包含块的左边界相接触（从左向右），即使浮动元素也是如此。（这说明BFC中子元素不会超出他的包含块，而position为absolute的元素可以超出他的包含块边界）
 
-### BFC的生成
+### 创建BFC
 上文提到BFC是一块渲染区域，那这块渲染区域到底在哪，它又是有多大，这些由生成BFC的元素决定，CSS2.1中规定满足下列CSS声明之一的元素便会生成BFC
 
 * float的值不为none
@@ -34,6 +34,10 @@ BFC(Block formatting context)直译为"块级格式化上下文"。它是一个�
 > display：table也认为可以生成BFC，其实这里的主要原因在于Table会默认生成一个匿名的table-cell，正是这个匿名的table-cell生成了BFC
 
 * position的值为abslolute或fixed
+
+### BFC主要作用
+* 清楚浮动
+* 防止同一BFC容器中的相邻元素间的外边距重叠问题
 
 ###  BFC在布局中的应用
 1.防止margin重叠（塌陷）：
