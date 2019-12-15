@@ -9,6 +9,9 @@
 ### 框架部分:
 * 【Vue】对于Virtual Dom的理解
 ### 前端安全:
+### 框架:
+* BFF
+* Vue-Virtual_Dom
 ### 数据结构与算法:
 * array
 * linkList
@@ -16,6 +19,7 @@
 * string
 ### html与css:
 * BFC
+* display&visibility
 ### js部分:
 * 执行上下文与执行栈
 * 手搓实现
