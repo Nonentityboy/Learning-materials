@@ -8,6 +8,8 @@
 ### 浏览器相关
 * Caching
 ### 计算机网络部分:
+* HTTP&HTTPS
+* UDP
 ### 框架部分:
 * 【Vue】对于Virtual Dom的理解
 ### 前端安全:
