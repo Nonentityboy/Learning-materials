@@ -27,6 +27,7 @@
 * BFC
 * display&visibility
 ### js部分:
+* 闭包
 * 多维数组转一维数组
 * 基本类型
 * 内存空间管理
