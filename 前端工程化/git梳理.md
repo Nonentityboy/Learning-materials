@@ -174,3 +174,8 @@ $ git commit -m "conflict fixed"，最后，删除feature1分支：$ git branch 
 			git reset --hard HEAD^
 		回到未来
 			 git reset --hard 1094a （可使用git reflog来查看commit ID）
+
+### 忽略文件.gitignore
+
+	一般我们总会有些文件无需纳入 Git 的管理，也不希望它们总出现在未跟踪文件列表。通常都是些自动生成的文件，比如日志文件，或者编译过程中创建的临时文件等。我们可以创建一个名为 .gitignore 的文件，列出要忽略的文件模式。
+		
