@@ -15,7 +15,7 @@
 * Caching
 ### 计算机网络部分:
 * HTTP&HTTPS
-* UDP
+* UDP&TCP
 ### 框架部分:
 * 【Vue】对于Virtual Dom的理解
 * BFF
@@ -26,6 +26,8 @@
 * BFF
 * Vue-Virtual_Dom
 ### 数据结构与算法:
+基本排序的方式。二分搜索、二叉树遍历，深度优先搜索，广度优先搜索。
+二叉树反转、TopK、剑指offer
 * array
 * linkList
 * stact&queue
