@@ -1,13 +1,16 @@
-var reverseList = function(head){
-    let p1 = head;
-    let p2 = null;
-    // p1 p2 为第一二个结点
-    // p1 p2不断往后移动
-    while(head && head.next) {
-        p2 = head.next;
-        head.next = p2.next;
-        p2.next = p1;
-        p1 = p2;
+var reverseList = function(head) {
+    if(!head) return null;
+    let pre = null;
+    let cur = head;
+    while(cur){
+        let next = cur.next;
+        // 借助中间变量next
+        cur.next = pre;
+        // 此时让当前节点的下一个节点指向前面的节点，第一次让它指向为null
+        pre = cur;
+        // pre后移到cur
+        cur = next;
+        // cur后移到next
     }
-    return p1
-}
+    return pre;
+};
